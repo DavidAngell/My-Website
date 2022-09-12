@@ -24,9 +24,9 @@ const links = [
         active: 'home'
     },
     {
-        name: 'Portfolio',
-        to: '/portfolio',
-        active: 'portfolio'
+        name: 'Projects',
+        to: '/projects',
+        active: 'projects'
     },
     {
         name: 'Musings',
@@ -57,12 +57,12 @@ export default function Navbar() {
             </Box>
         </BrowserView>
         <MobileView>
-        <Box component={'nav'} width={'90%'} style={{marginLeft: '5%', marginTop: '4rem'}}>
-                <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
-                    gap={{xs: '3rem', md: '6rem'}} fontSize={'1rem'}>
+            <Box component={'nav'} width={'100%'} style={{marginTop: '1.5rem', marginBottom: '2rem'}}>
+                <h1 style={{fontSize: '3.5rem', marginBottom: '1rem', transform: 'none !important'}}>David Angell</h1>
+                <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'} fontSize={'1rem'}>
                     {links.map((link, index) => (
                         <Box key={index} component={'li'} className={classNames((link.active.includes(active) && !link.type) && Style.active)}
-                            sx={{borderImageSource: info.gradient}}>
+                            style={{ borderBottomColor: info.baseColor }}>
                             <Link to={link.to} onClick={() => setActive(link.active)} style={{textAlign: 'center'}}>
                                 {!link.type && 
                                     <p style={{paddingBottom: '0.5rem'}} className={Style.list}>{link.name}</p>

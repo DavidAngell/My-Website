@@ -3,6 +3,7 @@ import styles from './PostBlock.module.scss';
 import { FiCalendar, FiUser } from 'react-icons/fi'
 import classNames from "classnames";
 import {info} from "../../info/Info";
+import { isMobile } from "react-device-detect";
 
 const iconClass = "fa fa-circle";
 
@@ -14,8 +15,8 @@ export default function PostBlock(post) {
             <i className={classNames(iconClass, styles.amber)}/>
             <i className={classNames(iconClass, styles.green)}/>
         </Box> */}
-        <Box component={'section'} className={classNames(styles.PostBlock, styles.shadowed)} width={{xs: '100%', md: '80%'}} borderRadius={'0.5rem'} mt={'0rem'} mb={'1.5rem'}>
-            <a className={styles.post}>
+        <Box component={'section'} className={classNames((isMobile) ? styles.PostBlockMobile : styles.PostBlock, styles.shadowed)} width={{xs: '100%', md: '80%'}} borderRadius={'0.5rem'} mt={'0rem'} mb={'1.5rem'}>
+            <a className={(isMobile) ? styles.post_mobile : styles.post}>
                 <strong style={{color: info.baseColor}}>{post.data.title}</strong>
                 <p>{post.data.subtitle}</p>
                 <ul>

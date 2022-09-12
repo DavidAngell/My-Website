@@ -14,18 +14,19 @@ export default function Musings() {
       <Helmet>
          <title>David Angell: Musings</title>
       </Helmet>
-      <Box component={'main'} display={'flex'} flexDirection='column' alignItems={'center'}
+      <Box component={'main'} display={'flex'} flexDirection='column' alignItems={'center'} py={{xs: '0.5rem', md: '2rem'}} px={{xs: '1.5rem', md: '3rem'}}
            justifyContent={'center'} minHeight={'calc(100vh - 500px)'}>
-         
-         {
-            Object.keys(POST_LIST).map(key => {
-               return (
-                  <Link to={`/musings/${key}`} style={{width: '80%', display: 'flex', justifyContent: 'center'}}>
-                     <PostBlock data={{...POST_LIST[key], author: "David Angell"}} />
-                  </Link>
-               )
-            })
-         }
+         <Box width={{xs: '100%', md: '80%'}}>
+            {
+               Object.keys(POST_LIST).map(key => {
+                  return (
+                     <Link to={`/musings/${key}`} style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
+                        <PostBlock data={{...POST_LIST[key], author: "David Angell"}} />
+                     </Link>
+                  )
+               })
+            }
+         </Box>
       </Box>
    </>
 }

@@ -10,6 +10,7 @@ import {Route, Routes} from "react-router-dom";
 import {Box, Grid} from "@mui/material";
 import Toggler from "./home/Toggler";
 import { POST_LIST } from './musings/posts/postlist';
+import { isMobile } from 'react-device-detect';
 
 export default function BaseLayout() {
    let [darkMode, setDarkMode] = useState(true);
@@ -29,7 +30,7 @@ export default function BaseLayout() {
                <Routes>
                   <Route exact path={'/'} element={<Home/>}/>
                   <Route exact path={'/about'} element={<About/>}/>
-                  <Route exact path={'/portfolio'} element={<Portfolio/>}/>
+                  <Route exact path={'/projects'} element={<Portfolio/>}/>
                   <Route exact path={'/musings'} element={<Musings/>}/>
 
                   {
@@ -43,9 +44,11 @@ export default function BaseLayout() {
 
                </Routes>
             </Grid>
-            <div style={{ postiton: 'fixed', top: '0', left: '0', transform: 'translate(calc(100% - 4rem), -2rem)', zIndex: '100'}}>
-               <Toggler darkMode={darkMode} handleClick={handleClick} />
-            </div>
+            { !isMobile && 
+               <div style={{ postiton: 'fixed', top: '0', left: '0', transform: 'translate(calc(100% - 4rem), -2rem)', zIndex: '100'}}>
+                  <Toggler darkMode={darkMode} handleClick={handleClick} />
+               </div>
+            }
          </Grid>
       </Box>
    </>

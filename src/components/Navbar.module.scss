@@ -5,12 +5,14 @@ nav {
 }
 
 .active {
-  border-bottom: 5px solid;
+  border-bottom: 3px solid;
   border-image-slice: 1;
 }
 
 .list {
   transition: $transition;
+
+  margin: 0 1rem;
 
   &:hover {
     transform: translateY(-3px);

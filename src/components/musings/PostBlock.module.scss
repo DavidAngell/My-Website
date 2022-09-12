@@ -3,12 +3,18 @@
 .PostBlock {
     background-color: #27242f;
     padding: 2rem 2.5rem;
-    margin: 0rem;
 
     transition: $transition;
 }
 
-.PostBlock:hover {
+.PostBlockMobile {
+    background-color: #27242f;
+    padding: 1.5rem 1.5rem;
+
+    transition: $transition;
+}
+
+.PostBlock:hover, .PostBlockMobile:hover {
     transform: translateY(-3px);
     transition: $transition;
 }
@@ -52,4 +58,45 @@
             }
         }
     }
+}
+
+.post_mobile {
+    strong {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        color: $white;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: $white;
+        }
+
+        & li {
+
+            span {
+                font-size: 0.6rem;  
+            }
+
+            & svg {
+                margin-right: 0.5rem;
+            }
+
+            & + li {
+                margin-left: 1.625rem;
+                
+            }
+        }
+    } 
 }

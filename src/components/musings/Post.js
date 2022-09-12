@@ -3,6 +3,7 @@ import styles from './Post.module.scss';
 import ReactMarkdown from 'react-markdown'
 import { POST_LIST } from "./posts/postlist";
 import { Helmet } from "react-helmet";
+import { isMobile } from "react-device-detect";
 
 export default function Post({ postName }) {
     return <>
@@ -17,9 +18,9 @@ export default function Post({ postName }) {
         </Box> */}
         <Box component={'main'} display={'flex'} flexDirection='column' alignItems={'center'}
            justifyContent={'center'} minHeight={'calc(100vh - 250px)'}>
-            <Box component={'section'} style={{backgroundColor: '#27242f', padding: '0 2.75rem 2.75rem 2.75rem'}} 
-                className={styles.shadowed} width={{xs: '80%', md: '60%'}} borderRadius={'0.5rem'} mb={'4rem'}>
-                <ReactMarkdown className={styles.Post}>
+            <Box component={'section'} padding={{xs: '0 1.75rem 1.75rem 1.75rem', md: '0 2.75rem 2.75rem 2.75rem'}} style={{backgroundColor: '#27242f'}} 
+                className={styles.shadowed} width={{xs: '90%', md: '60%'}} borderRadius={'0.5rem'} mb={'4rem'}>
+                <ReactMarkdown className={(isMobile) ? styles.PostMobile : styles.Post}>
                     {POST_LIST[postName].text}
                 </ReactMarkdown>
 

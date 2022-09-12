@@ -100,7 +100,7 @@ export const info = {
         },
         {
             title: "Krunker Fast Quick Sell",
-            desciption: "A faster quick sell script for krunker.io that allows plays to selectively sell usless items in exchange for in-game currency at a rate that would otherwise be not worth the hastle",
+            desciption: "A faster quick sell script for krunker.io that allows plays to selectively sell usless items in exchange for in-game currency at a rate that would otherwise be not worth the hastle.",
             live: "",
             source: "https://github.com/DavidAngell/Krunker-Faster-Quick-Sell",
             image: project5,
