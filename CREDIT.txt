@@ -1,0 +1,2 @@
+The website is heavily based on this template by Payton Jewell:
+https://github.com/paytonjewell/ReactPortfolioTemplate

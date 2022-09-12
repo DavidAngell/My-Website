@@ -85,7 +85,7 @@ Yes, it is, but not all theft is bad. [I build my morals off of reciprocated val
 It has also been brought up that the rich will just avoid the taxes. Again, this does not actually address the argument. Not a single person advocating for a more progressive tax system wouldn't also be in favor of streamlining our tax code such that there are fewer loopholes. Furthermore, if the rich can really so easily get around taxes, then aren't they just not paying taxes now? Increasing taxes wouldn't change that. It's not like we will magically receive less tax revenue. Now for some people, this might matter —especially those of us who think that we ought to tax the rich because taxing them is inherently moral— but I don't fall into that camp. Just as before, we can increase taxes now (or even add more tax brackets) while streamlining the tax code at the same time. The rich avoiding taxes is not an argument against making taxes more progressive; it is an argument against letting the rich avoid taxes.     
         `
     },
-    "yum" : {
+    "dark-humor" : {
         title: "On Dark Humor",
         subtitle: "Where is the line? Does it change in specific contexts?",
         first_publication_date: "9/10/2022",

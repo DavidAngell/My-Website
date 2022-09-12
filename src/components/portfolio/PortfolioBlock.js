@@ -2,10 +2,11 @@ import React from 'react';
 import IconLink from "./IconLink";
 import {Box} from "@mui/material";
 import {info} from "../../info/Info";
+import Style from './PortfolioBlock.module.scss'
 
 
 function PortfolioBlock(props) {
-   const {image, live, source, title, desciption, live_demo} = props;
+   const {image, live, source, title, desciption} = props;
    return (
       <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
          <Box component={'img'} src={image} alt={'mockup'}/>
@@ -13,14 +14,17 @@ function PortfolioBlock(props) {
          <p style={{fontSize: '1.25rem', textAlign: 'center', width: "75%", marginTop: "0.75rem"}}>{desciption}</p>
          <Box className={'portfolio'} display={'flex'} flexDirection={'column'} gap={'0.75rem'}
               alignItems={'center'} fontSize={'1.5rem'} py={'2rem'}>
-            { live_demo &&
+            { live !== "" &&
                <Box p={1} border={'1px solid black'} borderRadius={'20px'}>
                   <IconLink link={live} title={'Live Demo'} icon={'fa fa-safari'}/>
                </Box>
             }
-            <Box p={1} border={'1px solid black'} borderRadius={'20px'}>
-               <IconLink link={source} title={'Source Code'} icon={'fa fa-code'}/>
-            </Box>
+            { source !== "" &&
+
+               <Box p={1} border={'1px solid black'} borderRadius={'20px'}>
+                  <IconLink link={source} title={'Source Code'} icon={'fa fa-code'}/>
+               </Box>
+            }
          </Box>
       </Box>
    );

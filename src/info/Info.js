@@ -6,18 +6,6 @@ import project4 from "../img/project4.png"
 import project5 from "../img/project5.png"
 
 export let colors = ["rgb(29, 181, 190)", "rgb(153, 54, 211)"];
-/*
-I highly recommend using a gradient generator like https://gradientgenerator.paytonpierce.dev/ to generate a pair of colors that you like.
-These colors will be used to style your name on the homepage, the background of your picture, and some other accents throughout
-the site.
- */
-
-
-/*
-So let's get started! Some of the info below is pretty self-explanatory, like 'firstName' and 'bio'. I'll try to explain anything
-that might not be obvious right off the bat :) I recommend looking at the template example live using "npm start" to get an idea
-of what each of the values mean.
- */
 
 export const info = {
     firstName: "David",
@@ -86,7 +74,6 @@ export const info = {
             title: "Viewers Control",
             desciption: "The local client (game-side) for a program that my friend John and myself have been working on for a livestream chat to control/mess with your Rocket League game.",
             live: "https://viewerscontrol.com",
-            live_demo: false,
             source: "https://github.com/DavidAngell/Viewers-Control-Rocket-League",
             image: project1,
         },
@@ -94,17 +81,15 @@ export const info = {
             title: "Overkill Nerf Gun",
             desciption: "A Nerf Gun with a range finder that I made as a final project / friendly competition is AP Physics",
             live: "",
-            live_demo: false,
             source: "https://github.com/DavidAngell/Overkill-Nerf-Gun",
             image: project2,
         },
         {
-            title: "Project 3",
-            desciption: "",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
+            title: "Closet Finger Print Reader",
+            desciption: "Used an Arduino Uno and and ESP8266 along with firebase as my database to add a fingerprint reader that locks and unlocks my closet door both using Alexa and my fingerprint. Why? Better question. Why not?",
+            live: "",
+            source: "",
             image: project3,
-            live_demo: false,
         },
         {
             title: "Aspen-SIS",
@@ -112,15 +97,13 @@ export const info = {
             live: "",
             source: "https://github.com/DavidAngell/Aspen-SIS",
             image: project4,
-            live_demo: false,
         },
         {
-            title: "Project 5",
-            desciption: "",
-            live: "https://paytonpierce.dev",
-            source: "https://github.com/paytonjewell",
+            title: "Krunker Fast Quick Sell",
+            desciption: "A faster quick sell script for krunker.io that allows plays to selectively sell usless items in exchange for in-game currency at a rate that would otherwise be not worth the hastle",
+            live: "",
+            source: "https://github.com/DavidAngell/Krunker-Faster-Quick-Sell",
             image: project5,
-            live_demo: true,
         }
     ]
 }
