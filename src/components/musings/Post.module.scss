@@ -1,0 +1,52 @@
+@import "../../variables.modules";
+
+.Post {
+    h1 {
+        font-size: 2.75rem;
+        margin-top: 2.5rem;
+        color: $baseColor;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        margin-top: 1.75rem;
+        color: $baseColor;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+        margin-top: 1.5rem;
+        color: $baseColor;
+    }
+
+
+    p {
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+        // margin-left: 1rem;
+        padding: 0.5rem 0;
+        color: $white;
+    }
+
+    a {
+        color: lightgray;
+        transition: $transition;
+    }
+
+    a:hover {
+        color: $baseColor;
+        transition: $transition;
+    }
+
+    hr {
+        margin: 2rem 0;
+    }
+
+    ol {
+        font-size: 1.15rem;
+        line-height: 1.75rem;
+        margin-left: 3rem;
+        padding: 0 0;
+        margin-top: -.25rem;
+    }
+}

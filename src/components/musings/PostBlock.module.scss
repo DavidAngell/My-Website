@@ -1,0 +1,55 @@
+@import "../../variables.modules";
+
+.PostBlock {
+    background-color: #27242f;
+    padding: 2rem 2.5rem;
+    margin: 0rem;
+
+    transition: $transition;
+}
+
+.PostBlock:hover {
+    transform: translateY(-3px);
+    transition: $transition;
+}
+
+.post {
+    strong {
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin-top: 0.5rem;
+        font-size: 1.125rem;
+        color: $white;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 1.5rem;
+        display: flex;
+
+        li {
+            display: flex;
+            align-items: center;
+            color: $white;
+        }
+
+        & li {
+
+            span {
+                font-size: 0.775rem;  
+            }
+
+            & svg {
+                margin-right: 0.5rem;
+            }
+
+            & + li {
+                margin-left: 1.625rem;
+                
+            }
+        }
+    }
+}
