@@ -2,9 +2,13 @@ import React from 'react';
 import PortfolioBlock from "./PortfolioBlock";
 import {Box, Grid} from "@mui/material";
 import {info} from "../../info/Info";
+import { Helmet } from 'react-helmet';
 
 export default function Portfolio() {
-    return (
+    return <>
+        <Helmet>
+            <title>David Angell: Portfolio</title>
+        </Helmet>
         <Box>
             <Grid container display={'flex'} justifyContent={'center'}>
                 {info.portfolio.map((project, index) => (
@@ -14,5 +18,5 @@ export default function Portfolio() {
                 ))}
             </Grid>
         </Box>
-    );
+    </>
 };

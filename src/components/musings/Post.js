@@ -2,9 +2,13 @@ import {Box} from "@mui/material";
 import styles from './Post.module.scss';
 import ReactMarkdown from 'react-markdown'
 import { POST_LIST } from "./posts/postlist";
+import { Helmet } from "react-helmet";
 
 export default function Post({ postName }) {
     return <>
+        <Helmet>
+            <title>David Angell: {POST_LIST[postName].title}</title>
+        </Helmet>
         {/* <Box sx={{backgroundColor: '#8c8c8c'}} p={'0.5rem'} borderRadius={'0.5rem 0.5rem 0 0'}
             fontSize={'1rem'}>
             <i className={classNames(iconClass, styles.red)}/>

@@ -7,10 +7,13 @@ import {info} from "../../info/Info";
 import { POST_LIST } from './posts/postlist';
 import PostBlock from './PostBlock'
 import {Link, useLocation} from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 export default function Musings() {
-
-   return (
+   return <>
+      <Helmet>
+         <title>David Angell: Musings</title>
+      </Helmet>
       <Box component={'main'} display={'flex'} flexDirection='column' alignItems={'center'}
            justifyContent={'center'} minHeight={'calc(100vh - 500px)'}>
          
@@ -24,5 +27,5 @@ export default function Musings() {
             })
          }
       </Box>
-   )
+   </>
 }

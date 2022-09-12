@@ -4,57 +4,19 @@ export const POST_LIST = {
         subtitle: "How the heck do we even ground our ethics?",
         first_publication_date: "9/10/2022",
         text: `
-# Arduino Code
+# My Philosophy
 
-If you aren’t familiar with Arduinos, here is a quick rundown of how Arduino code differs from C/C++ code. The key difference is that there is no *main()* function that acts as the single entrance point of your code. Rather, there is *setup()* which contains all of the code that runs at startup and *loop()* which runs after the *setup()* function and, as the name implies, repeats while the Arduino is on. 
+---
 
-So, in *loop()* I display one of three screens: a range finder input screen in which the user points the gun at their chosen target; a height input screen in which the user input’s their height above the ground in feet; and a targeting screen in which the users aims the gun at the location which would hit the target.
+Rule Utilitarianism = pog
 
-## Libraries
-
-These are some of the simple libraries I threw together to help aid code readability. If I have named my functions well, you should not need an understanding of these to understand main.cpp. Regardless, all three of these are structured in the same way: they are namespaces that have a *begin()* function which is run during *setup()* and contain useful functions from their respective devices. 
-
-### Display.cpp
-
-This one is probably the easiest to understand. It is basically a wrapper for the Adafruit SSD1306 display library. Normally, if one wanted to write something to the display, they would need to do this:
-
-This is a pain. 
-
-None of us high-level programmers ever wanna look at that ugly mess all over our code. Instead, *Display.cpp* contains this:
-
-
-Now, any text or numbers can easily be written to the display like this:
-
-*readPitchAngle()* just reads the $y$ and $z$ acceleration from the accelerometer, plugs them into *atan2()* —a function in *math.h* that computes the inverse tangent in the range $[-\pi, +\pi]$ radians— and converts the output into degrees.
-
-### RangeFinder.cpp
-
-I’m too lazy to explain this right now :(
-
-
-
-## main.cpp
-
-The *main.cpp* file starts by running the *begin()* method for the ranger finder, accelerometer, and display inside of *setup()*. Then, it sets the pin mode of the “confirm” and “change screen” pins on the gun controller as INPUT_PULLUP; meaning that it reads whether the pin is pulled to +5v or ground and uses the Arduino Nano’s built-in pull-up resistors to do so.
-
-
-After this, the Arduino runs the *loop()* for the rest of the on-time of the device. Within *loop()*, we check whether the “change screen” pin has been pressed (pulled up to +5v), and if it has, the current screen number gets updated accordingly. Otherwise, the Arduino just checks what the screen number mod 3 is because there are 3 screens. This method will cause an overflow after every 256 screen changes, but (1) it won’t really be too noticeable to the user because they will just have to press the button again and (2) I’m too lazy to fix it —if you want it fixed, make a pull request so I can ignore it :)
-
-
-
-The next major part of *main.cpp* are the two functions which read the firing height pot and translate the resistance of it into a height in feet and meters respectively. The math itself is a tad arbitrary —I just divided *sensorVal* by 12 because it gave me a nice result of an 85 inch / 2.165 meter max.
-
-
-
-Finally, we have the application of the math —[explained here](Range%20Finder%20Math.md)— that is used to calculate the firing angle of the gun.
-                
         `
     },
 
     "tax-policy" : {
         title: "Taxes *Snore*",
         subtitle: "A breif arguement in favor of more progressive tax policies...",
-        first_publication_date: "6/25/2022",
+        first_publication_date: "7/11/2022",
         text: `
 # Taxes * Snore *
 
@@ -133,12 +95,12 @@ Coming soon!
 
         `
     },
-    "bum" : {
-        title: "Abi",
-        subtitle: "How the heck do we even ground our ethics?",
-        first_publication_date: "9/10/2022",
-        text: `
-# Abi          
-        `
-    },
+//     "bum" : {
+//         title: "Abi",
+//         subtitle: "How the heck do we even ground our ethics?",
+//         first_publication_date: "9/10/2022",
+//         text: `
+// # Abi          
+//         `
+//     },
 }

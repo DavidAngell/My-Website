@@ -3,6 +3,7 @@ import Style from './About.module.scss';
 import Terminal from "./Terminal";
 import {Box} from "@mui/material";
 import {info} from "../../info/Info";
+import { Helmet } from 'react-helmet';
 
 
 export default function About() {
@@ -49,11 +50,14 @@ export default function About() {
         </>;
     }
 
-    return (
+    return <>
+        <Helmet>
+            <title>David Angell: About</title>
+        </Helmet>
         <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={'1rem'}>
             <Terminal text={aboutMeText()}/>
             <Terminal text={skillsText()}/>
             <Terminal text={miscText()}/>
         </Box>
-    )
+    </>
 }
