@@ -30,7 +30,7 @@
     }
 
     a {
-        color: lightgray;
+        color: rgb(185, 185, 185);
         transition: $transition;
     }
 
@@ -43,7 +43,7 @@
         margin: 2rem 0;
     }
 
-    ol {
+    ol, blockquote {
         font-size: 1.15rem;
         line-height: 1.75rem;
         margin-left: 3rem;
@@ -82,7 +82,7 @@
     }
 
     a {
-        color: lightgray;
+        color: rgb(185, 185, 185);
         transition: $transition;
     }
 
@@ -95,7 +95,7 @@
         margin: 1.5rem 0;
     }
 
-    ol {
+    ol, blockquote {
         font-size: 1rem;
         line-height: 1.5rem;
         margin-left: 3rem;
